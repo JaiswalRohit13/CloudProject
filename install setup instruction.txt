@@ -1,0 +1,48 @@
+1. need to install apache server with php and mysql database - like xammp window software
+2. open xammp control panel 
+3. start mysql server 
+4. start apache server 
+5. run http://localhost in the browser 
+6. go to phpmyadmin database ui 
+7. create database name is : connect
+8. clone repository for connect project access given by Mr. Amit Kumar Yadav
+9. go to repo folder after clone  
+10. import our database in to connect with the file name connect.sql , present inside the repo root folder
+11. after point 10 database upload on local successful 
+12. need to code editor as you prefer - like atom,vscode,sublime,or brackets 
+13. open project into codeEditor
+14. first need to run command into root folder - npm install
+15. then second command - npm start 
+16. then if you run local then run api as base url like : http://localhost:4000/
+
+
+
+
+Update Add-product in productandcategory.js line number-74 - add token in function 
+
+
+SQL Query to create Vendor_ID coulmn in product table - ALTER TABLE `product` ADD `vendor_id` INT(11) NOT NULL DEFAULT '0' AFTER `updated_at`;
+
+
+Added Get-Product_list By Vendor Id in Product-models .... Line No. - 152
+
+
+WORK DONE BY MERU - 
+
+                                   ```DATE - 12 JULY```
+
+1. Created MODEL in user-model.js in LINE NO. 107 (GetCustomerProjectCount) to fetch My Projects  - 
+-> Annoucement Count
+-> Vendor View Count
+-> Quotation Submitted Count
+-> Project Completed Count
+
+2. Created Controller for above Model in users.js in Line NO. 336 (Get-Customer-Project-Count).
+
+3. All Test Cases worked fine.
+
+4.Pushed API to DEV Branch in Github
+
+
+
+ALTER TABLE `product` ADD `payment_type` INT(11) NOT NULL AFTER `category_id`;

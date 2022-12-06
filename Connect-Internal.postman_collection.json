@@ -1,0 +1,3799 @@
+{
+	"info": {
+		"_postman_id": "d9d6435a-2211-439a-8a3d-f07599aca783",
+		"name": "Attendance-Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4790270"
+	},
+	"item": [
+		{
+			"name": "admins-module",
+			"item": [
+				{
+					"name": "Admin-User-Registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2ODUwMDQwOCwiZXhwIjoxNjcxMDkyNDA4fQ.e6Gwjq1lJxntPtvAgnurrhQjiKDCH4Q95QmJNMpawww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user_name\":\"amit12nig96@gmail.com\",\"password\":\"amit@123\",\"firstname\":\"Amit\",\"lastname\":\"Kumar\",\"role\":\"Sales\",\"country\":\"India\",\"country_code\":91,\"mobile_no\":\"9596561100\"}\r\n\r\n      ",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Create-Admin-User",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Create-Admin-User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Admin-User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTg2OTQzNiwiZXhwIjoxNjcyNDYxNDM2fQ.3rWKpbr2C-P8pF9570a800pBLKRNcO6CZf1UZJwUuxs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Amit Kumar\",\r\n    \"lastname\": \"Yadav\",\r\n    \"role\": \"Sales\",\r\n    \"country\": \"India\",\r\n    \"country_code\": 91,\r\n    \"mobile_no\": \"9596561100\",\r\n    \"admin_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Update-Admin-User",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Update-Admin-User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin-Login-All-Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"user_name\":\"amit12nig96@gmail.com\",\r\n \"password\":\"amit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Admin-Login",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Admin-Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create-Menu-For-Admin-Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTI4NDIwNCwiZXhwIjoxNjcxODc2MjA0fQ.a4U9hvtsTFFG0xFAJmnWUFO_N5nA59vUakhxBnVtvgY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_name\" : \"Transaction List\", \r\n    \"parent_id\": \"0\",\r\n    \"alias_status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Create-Menu-For-Admin-Role",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Create-Menu-For-Admin-Role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create-Admin-Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTg2OTQzNiwiZXhwIjoxNjcyNDYxNDM2fQ.3rWKpbr2C-P8pF9570a800pBLKRNcO6CZf1UZJwUuxs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\":\"Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Create-Roles",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Create-Roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Admin-Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTg2OTQzNiwiZXhwIjoxNjcyNDYxNDM2fQ.3rWKpbr2C-P8pF9570a800pBLKRNcO6CZf1UZJwUuxs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\":\"Developer\",\r\n    \"role_id\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Update-Roles",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Update-Roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTg2OTQzNiwiZXhwIjoxNjcyNDYxNDM2fQ.3rWKpbr2C-P8pF9570a800pBLKRNcO6CZf1UZJwUuxs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_id\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Delete-Roles",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Delete-Roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2ODUxMzc5NSwiZXhwIjoxNjcxMTA1Nzk1fQ.TgZerpUL-0eys6pdHXNH8pCU8XSvBwVbecZfAVmrvTU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local_url}}/api/admin/Get-Roles",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Get-Roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-ALL-Menu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2ODUxMzc5NSwiZXhwIjoxNjcxMTA1Nzk1fQ.TgZerpUL-0eys6pdHXNH8pCU8XSvBwVbecZfAVmrvTU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/admin/Get-Admin-All-Menu",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Get-Admin-All-Menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-VendorList-Info-For-Conqt",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY3NDQ2OTc5LCJleHAiOjE2NzAwMzg5Nzl9.BZHBXW3L2033zOf_LmBZ1xfamtjnbSl_0XKyQT7D-Xs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ds_url}}/api/admin/Get-Admin-Vendor-List",
+							"host": [
+								"{{ds_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Get-Admin-Vendor-List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Admin-Customer-List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTY5NTIxNywiZXhwIjoxNjcyMjg3MjE3fQ.bbmiC5vdvp32PDp3lJN2jOKO_Lo9oUTis9ZuPd3sxJI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ds_url}}/api/admin/Get-Admin-Customer-List",
+							"host": [
+								"{{ds_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Get-Admin-Customer-List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Announcement-List-Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY1MTI1MjUwLCJleHAiOjE2Njc3MTcyNTB9.e4tF3HkLhjvQFC1-fPAc8IKVJC_cFNyaahSEnazvvQ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}/api/superdashboard/Get-All-Announcement-List-Admin",
+							"host": [
+								"{{local_url}}"
+							],
+							"path": [
+								"api",
+								"superdashboard",
+								"Get-All-Announcement-List-Admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Admin-All-Miletsonte-List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IkFkbWluIn0sImlhdCI6MTY2OTg2OTQzNiwiZXhwIjoxNjcyNDYxNDM2fQ.3rWKpbr2C-P8pF9570a800pBLKRNcO6CZf1UZJwUuxs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"proposal_id\":\"54\",\r\n \"announcement_id\":\"95\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ds_url}}/api/admin/Get-Admin-All-Miletsonte-List",
+							"host": [
+								"{{ds_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"Get-Admin-All-Miletsonte-List"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin-User-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"amit12nig96@gmail.com\",\r\n \"password\":\"amit@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lds_url}}/api/super/Super-login",
+					"host": [
+						"{{lds_url}}"
+					],
+					"path": [
+						"api",
+						"super",
+						"Super-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Department",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/user/User-Department",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Country-List-with-Currency",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/common/Get-All-Country",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"common",
+						"Get-All-Country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin-MileStone-Tranctation-Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY1MTI1MjUwLCJleHAiOjE2Njc3MTcyNTB9.e4tF3HkLhjvQFC1-fPAc8IKVJC_cFNyaahSEnazvvQ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transactions_id\": \"pay_Jp9EbKg5Pmbo922\",\r\n\"currency\": \"INR\",\r\n\"amount\": \"1\",\r\n\"transaction_status\": \"COMPLETED\",\r\n\"milestone_id\":\"1\",\r\n\"invoice_no\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/superdashboard/Admin-Milestone-Payment-Update-to-vendor",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Admin-Milestone-Payment-Update-to-vendor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Create Subscription plan for vendor or customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY2MTc0MzI4LCJleHAiOjE2Njg3NjYzMjh9.Jy7Vn1pBCEA0OeJO0QVpjSMIS8E6kpzBuTmNDvVYNjk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subscription_for",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "subscription_title",
+							"value": "SILVER",
+							"type": "text"
+						},
+						{
+							"key": "subscription_description",
+							"value": "This plan credit 500 point in your account",
+							"type": "text"
+						},
+						{
+							"key": "subcription_amount",
+							"value": "49",
+							"type": "text"
+						},
+						{
+							"key": "subscription_point",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Hp/Desktop/160818038619214824105fdae2a2ef5bd.jpg"
+						},
+						{
+							"key": "subscription_position",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local_url}}/api/superdashboard/Add-Create-Subscription-Plan",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Add-Create-Subscription-Plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Mr.\",\r\n \"firstname\":\"Amit\",\r\n \"lastname\":\"Yadav\",\r\n \"user_name\":\"developer.amityadav@gmail.com\",\r\n \"phonenumber\": \"9596561100\",\r\n \"country\": \"india\",\r\n \"currency\" : \"Rupees\",\r\n \"currency_code\" : \"INR\",\r\n \"symbol\" : \"Rp\",\r\n \"city\":\"basti\",\r\n \"zipcode\": \"400042\",\r\n \"password\":\"amit@123\",\r\n \"confirm_password\":\"amit@123\",\r\n \"department_name\":\"software\",\r\n \"position\":\"software\",\r\n \"address\":\"harna dabar\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/user/User-Ragistration",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Ragistration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"amit12nig96@gmail.com\",\r\n \"password\":\"amit@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/user/User-login",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-forgot-password-initialzation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"girish.phalke619@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/user/User-Forgot-P-I",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Forgot-P-I"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-forgot-otp-verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjc2MzYxMCwidXNlcl9uYW1lIjoxLCJuYW1lIjo3NjM2MTB9LCJpYXQiOjE2NTU3ODIwMDIsImV4cCI6MTY1ODM3NDAwMn0.4RrfXI4DYKfDnRr_DIH-qF63Cht-H1ojLv5iFFaaTwk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"otp\":\"763610\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/user/User-Password-Otp-Verify",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Password-Otp-Verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Password-Update-forgot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjc2MzYxMCwidXNlcl9uYW1lIjoxLCJuYW1lIjo3NjM2MTB9LCJpYXQiOjE2NTU3ODIwMDIsImV4cCI6MTY1ODM3NDAwMn0.4RrfXI4DYKfDnRr_DIH-qF63Cht-H1ojLv5iFFaaTwk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"password\":\"Tech@54321!@#\",\r\n \"confirm_password\":\"Tech@54321!@#\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/user/User-Password-Update",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Password-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Amit Kumar Yadav1\",\r\n \"user_name\":\"amit12nig961@gmail.com\",\r\n \"password\":\"amit\",\r\n \"confirm_password\":\"amit\",\r\n \"department_id\":\"1\",\r\n \"position\":\"software\",\r\n \"address\":\"harna dabar\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/user/User-Update",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Send-Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjQsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlUifSwiaWF0IjoxNjY2ODc5NDYzLCJleHAiOjE2Njk0NzE0NjN9.14py3Ly8V6Ch0R6oc9Tf0MvAlcUf93mMT7CYoqtMiWY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vendor_id\":\"38\",\r\n \"announcement_id\":\"95\",\r\n \"proposal_id\":\"8\",\r\n \"stars\":\"5\",\r\n \"review\":\"Resourcing has been the recently painful task which ConQT helped to ease off. By Providing us development resources,our products are now in the market in lesser than expected time\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/user/Customer-Send-Review",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"Customer-Send-Review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User-Details-by-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjQsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY1MDQ0OTQwNCwiZXhwIjoxNjUzMDQxNDA0fQ.ymFlDSg3RPWhprjT0cfSp86W80g87ZDWuk1zfqH3q7c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/user/User-Details",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-Announcement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkiLCJsb2dpbl90eXBlIjoiVSJ9LCJpYXQiOjE2Njg2NjQwODQsImV4cCI6MTY3MTI1NjA4NH0.-Ffa4D4Bbkh_GAMjdVQe3cs_bEdvNKP4b14A2SpQGfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "project_name",
+							"value": "Project Test 5022202",
+							"type": "text"
+						},
+						{
+							"key": "project_description",
+							"value": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Pune",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "solution_name",
+							"value": "software",
+							"type": "text"
+						},
+						{
+							"key": "project_budget",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "project_expiry_datetime",
+							"value": "2022-12-20",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": "wV0wj3let/restaurant-equipment.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Create-Announcement",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Create-Announcement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Announcement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY1MDMzODI2OCwiZXhwIjoxNjUyOTMwMjY4fQ.8_-SP5eBib8v8y3xS-cAh4S8t_7Xbr4A3oE7saioakk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"project_name\":\"Credit to Bank for city update\",\r\n     \"announcement_id\":\"6\",\r\n    \"project_description\":\"Credit to Bank Project Information for city update\",\r\n    \"city\":\"New updte\",\r\n    \"country\":\"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/announcement/Announcement-Update",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Announcement-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Announcement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjQsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY1MDQ0OTg3OSwiZXhwIjoxNjUzMDQxODc5fQ.6RZglLH0BxC9njUOY36vJR7d9rf6OMbABVCWBqaOjAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"announcement_id\":\"23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/announcement/Announcement-Delete",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Announcement-Delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Announcement-Public-List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/announcement/Announcement-List-New",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Announcement-List-New"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Announcement-with-vendor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6ImFiY2x0ZCIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2OTYyMjgzMSwiZXhwIjoxNjcyMjE0ODMxfQ.2s5c7tfrte9MObQKXuPxeBO5f_kJhIbYWwEq1eIkCaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vendor_id\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/announcement/Announcement-List-New",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Announcement-List-New"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-List-of-spcific-announcment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkifSwiaWF0IjoxNjU2OTM0NTM5LCJleHAiOjE2NTk1MjY1Mzl9.a9jFRRMGa-PV1IYC6Euk4tBzBj-Yo6gLk-SS08hXcXY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"announcement_id\":\"95\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Get-Vendor-List-apply-Announcment",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Get-Vendor-List-apply-Announcment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User-Announcement-List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkifSwiaWF0IjoxNjYxMTQwNzI4LCJleHAiOjE2NjM3MzI3Mjh9.iUqSH2r9r--2D4FDHZ0Ty05cQ1bo_XGQmtijvBqDysA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/User-Announcement-List",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"User-Announcement-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-Final-Project-List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkifSwiaWF0IjoxNjU5OTMxNTE5LCJleHAiOjE2NjI1MjM1MTl9.grpZemvHsxlSHtcFLfLXCqQY3M4gXpj5M-dWlY6RlEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Customer-Final-Project-List",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Customer-Final-Project-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Solutions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendor/Get-Solutions",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Solutions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"company_name\":\"Credit to Bank new\",\r\n    \"user_name\":\"amit12nig96@gmail.com\",\r\n    \"password\":\"Amit@1234\",\r\n    \"confirm_password\":\"Amit@1234\",\r\n    \"country\": \"india\",\r\n    \"currency\" : \"Rupees\",\r\n    \"currency_code\" : \"INR\",\r\n    \"symbol\" : \"Rp\",\r\n    \"city\":\"basti\",\r\n    \"zipcode\": \"400042\",\r\n    \"address\":\"harna dabaar\",\r\n    \"solutions\":\"software\",\r\n    \"phone_no\":\"9596561100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendor/Vendor-Registration",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6ImFiY2x0ZCIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NDg5NDQ0MywiZXhwIjoxNjY3NDg2NDQzfQ.vMlV9RFgq8G1wZWpGlSNAcbtYyBS_EwIQKVa3IEJgk4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"tester@gmail.com\",\r\n \"password\":\"Test@123\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/vendor/Vendor-login",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-update-details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJDcmVkaXQgdG8gQmFuayBuZXcifSwiaWF0IjoxNjU4NzI3NTU1LCJleHAiOjE2NjEzMTk1NTV9.WVIA2UfVXd13kIOMiPNCtqVS-TuTZc0NrHl1ayU3rEM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"company_name\":\"Credit2Bank\",\r\n \"brand_name\":\"Hack\",\r\n \"contact_name\":\"amit\",\r\n \"contact_email\":\"amit12nig96\",\r\n \"contact_mobile\":\"9596561100\",\r\n \"gst_number\":\"xzxzxzxzxz\",\r\n \"contact_us_link\":\"....\",\r\n \"bussiness_website_app\":\"....\",\r\n \"add_bussiness_website_app\":\"....\",\r\n \"solutions\":\"hardware\",\r\n \"vendor_id\":1\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/vendor/Vendor-Update",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-forgot-password-initialzation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"amit123@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/vendor/Vendor-Forgot-P-I",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Forgot-P-I"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-forgot-otp-verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4Mjc5OSwidXNlcl9uYW1lIjoyMiwibmFtZSI6MzgyNzk5fSwiaWF0IjoxNjU1MjEyMjE2LCJleHAiOjE2NTc4MDQyMTZ9.7VM3jj7YWhcfPaHBbROfEpQ1VNrAmAzdOXoz9ZAexjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"otp\":\"382799\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendor/Vendor-Password-Otp-Verify",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Password-Otp-Verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Password-Update-forgot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEwMzQwNSwidXNlcl9uYW1lIjoyMiwibmFtZSI6MTAzNDA1fSwiaWF0IjoxNjU1MjEzMTAzLCJleHAiOjE2NTc4MDUxMDN9.HEQXvUGMpxm_x-xV8u9hGttiFD5KaN2IuHU4sgo-T4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"password\":\"Tech@54321!@#\",\r\n \"confirm_password\":\"Tech@54321!@#\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendor/Vendor-Password-Update",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Password-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjYyNTIxNTcyLCJleHAiOjE2NjUxMTM1NzJ9.8yc3SRBDKR2RUfKEt0L9E0X7uN60oNO0-vmk6z6rM5U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"user_name\":\"amit12nig96@gmail.com\",\r\n \"password\":\"Amit@1234\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Details",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proposal apply for project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6ImFiY2x0ZCIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTczMDI1MCwiZXhwIjoxNjY4MzIyMjUwfQ.deNSi_5jO9swgFZVPvMf8HX3Ksekt_szCdrLPex6Xcg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"announcement_id\": \"109\",\r\n  \"currency\": \"THB\",\r\n  \"price\": \"1000\",\r\n  \"timeline\": \"25\",\r\n  \"timeline_unit\": \"Days\",\r\n  \"perposal_description\": \"<p>IOS Proposal Scope of Work</p>\",\r\n  \"project_resources\": \"<p>Enter What type of Project Resources get to customer in this project.</p>\",\r\n  \"project_support\": \"<p>Enter What type of support get to customer in this project.Enter What type of support get to customer in this project.</p>\",\r\n  \"out_of_scope\": \"<p>Enter the out of scope Here.Enter the out of scope Here.Enter the out of scope Here.</p>\",\r\n  \"terms_conditions\": \"<p>Enter the Terms and Conditions Here. Enter the Terms and Conditions Here. Enter the Terms and Conditions Here.&nbsp;</p>\",\r\n  \"milestone_description\": \"IOS App Development||IOS App Development||IOS App Development\",\r\n  \"milestone_percent\": \"40,30,30\",\r\n  \"milestone_count\": \"3\",\r\n  \"milestone_amount\": \"400,300,300\",\r\n  \"milestone_timeline\": \"2022-10-18,2022-10-21,2022-10-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendordashboard/Proposal-Apply",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Proposal-Apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Milestone-Update-Complete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJDcmVkaXQgdG8gQmFuayBuZXcifSwiaWF0IjoxNjYwOTIwNjA4LCJleHAiOjE2NjM1MTI2MDh9.hcN4hlkX3Zxk7DcpQNGuNcLRrdLVuM9l0oyB_UHyGpY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"milestone_id\":1,\r\n \"vendor_remark\":\"check with mark as complete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Milestone-Update-Complete",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Milestone-Update-Complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Milestone-Invoice-For-conqt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJDcmVkaXQyQmFuayIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2MjE0MDYwNCwiZXhwIjoxNjY0NzMyNjA0fQ.AEE5eO7xdvn4V0ZtqIudrWQq2PGNii0gVC77Ga6czm8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Hp/Desktop/event.png"
+						},
+						{
+							"key": "milestone_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Add-vendor-Invoice",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Add-vendor-Invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Milestone-Customer-Approve-Decline-Milestone",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY2MDg4Mjg4OSwiZXhwIjoxNjYzNDc0ODg5fQ.9RYFCsN-sBIT96fOaIAzwVNiCLHuYvizGe4KXiv0La8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"milestone_id\":1,\r\n\"customer_remark\":\"now2 some point complete in this milestone stone till page no. 2 as per the document\",\r\n\"status\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Customer-Approve-Decline-Milestone",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Customer-Approve-Decline-Milestone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vendor payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI0LCJ1c2VyX25hbWUiOiJ0ZWNoY3VydmVpbmRpYTFAZ21haWwuY29tIiwibmFtZSI6IlRlY2ggQ3VydmUifSwiaWF0IjoxNjUxMDQwODE3LCJleHAiOjE2NTM2MzI4MTd9.MLgxNFvXp-7rzONT7f4r6RA-Wm27IadrYlNOwTZfWOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1W870157PD990361N\",\r\n    \"intent\": \"CAPTURE\",\r\n    \"status\": \"COMPLETED\",\r\n    \"purchase_units\": [\r\n        {\r\n            \"reference_id\": \"default\",\r\n            \"amount\": {\r\n                \"currency_code\": \"USD\",\r\n                \"value\": \"5.00\"\r\n            },\r\n            \"payee\": {\r\n                \"email_address\": \"sb-43wlh86343724@business.example.com\",\r\n                \"merchant_id\": \"ZQ6FKTMPLZ8DN\"\r\n            },\r\n            \"description\": \"Vendor Subscription\",\r\n            \"payments\": {\r\n                \"captures\": [\r\n                    {\r\n                        \"id\": \"1A0701541H160210K\",\r\n                        \"status\": \"COMPLETED\",\r\n                        \"amount\": {\r\n                            \"currency_code\": \"USD\",\r\n                            \"value\": \"5.00\"\r\n                        },\r\n                        \"final_capture\": true,\r\n                        \"seller_protection\": {\r\n                            \"status\": \"ELIGIBLE\",\r\n                            \"dispute_categories\": [\r\n                                \"ITEM_NOT_RECEIVED\",\r\n                                \"UNAUTHORIZED_TRANSACTION\"\r\n                            ]\r\n                        },\r\n                        \"create_time\": \"2022-04-27T09:45:59Z\",\r\n                        \"update_time\": \"2022-04-27T09:45:59Z\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ],\r\n    \"payer\": {\r\n        \"name\": {\r\n            \"given_name\": \"John\",\r\n            \"surname\": \"Doe\"\r\n        },\r\n        \"email_address\": \"sb-tqiix6356709@personal.example.com\",\r\n        \"payer_id\": \"T9ENL5CX6H99W\",\r\n        \"address\": {\r\n            \"country_code\": \"US\"\r\n        }\r\n    },\r\n    \"create_time\": \"2022-04-27T09:45:30Z\",\r\n    \"update_time\": \"2022-04-27T09:45:59Z\",\r\n    \"links\": [\r\n        {\r\n            \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/1W870157PD990361N\",\r\n            \"rel\": \"self\",\r\n            \"method\": \"GET\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendordashboard/Payment-Update",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Payment-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vendor payment Razar pay",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEwOCwidXNlcl9uYW1lIjoibWVydS50ZWNoY3VydmVAZ21haWwuY29tIiwibmFtZSI6IlRlc3QifSwiaWF0IjoxNjU2OTA2ODQyLCJleHAiOjE2NTk0OTg4NDJ9.ypq7r44txd54IePdkqrtR2K--oP9rniIUQSGfFeNe80",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transactions_id\": \"pay_Jp9EbKg5Pmao9W\",\r\n\"currency\": \"INR\",\r\n\"amount\": \"1\",\r\n\"transaction_status\": \"COMPLETED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/vendordashboard/Payment-Update-Rzp",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Payment-Update-Rzp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Proposal-List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI0LCJ1c2VyX25hbWUiOiJ0ZWNoY3VydmVpbmRpYTFAZ21haWwuY29tIiwibmFtZSI6IlRlY2ggQ3VydmUifSwiaWF0IjoxNjUwOTcyNjA2LCJleHAiOjE2NTM1NjQ2MDZ9.HA3yHeTEUeNaUvUyhs4xSwSyUB4kYtTrB7RuOa9dmpQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/vendordashboard/Vendor-Proposal-List",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Vendor-Proposal-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Final-Project-List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJDcmVkaXQyQmFuayJ9LCJpYXQiOjE2NjA3MjEyMjcsImV4cCI6MTY2MzMxMzIyN30.6mBlJdP8DHFioqLTP2LsYCmaL7W4N8td-s0gvCGKzWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Vendor-Final-Project-List",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Vendor-Final-Project-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Product-Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "3EoSywnSO/h2-img3.png"
+						},
+						{
+							"key": "category_name",
+							"value": "MicroSoft Office 365",
+							"type": "text"
+						},
+						{
+							"key": "category_type",
+							"value": "1",
+							"description": "1 for main category , 2 for subcategory ",
+							"type": "text"
+						},
+						{
+							"key": "parent_id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ps_url}}/api/product/Add-Category",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Add-Category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjQsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY1NTM3NDc2NiwiZXhwIjoxNjU3OTY2NzY2fQ.7hdQSfhFRpZ0C2tdYtimnjKX54LVtOVuD91-NHzCdHU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "Excell 365 2",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "product_description",
+							"value": "this is nice product 2",
+							"description": "1 for main category , 2 for subcategory ",
+							"type": "text"
+						},
+						{
+							"key": "product_information",
+							"value": "this is product information ",
+							"type": "text"
+						},
+						{
+							"key": "features",
+							"value": "new,",
+							"type": "text"
+						},
+						{
+							"key": "specifications",
+							"value": "hello,",
+							"type": "text"
+						},
+						{
+							"key": "compatibility",
+							"value": "all machine,",
+							"type": "text"
+						},
+						{
+							"key": "video_link",
+							"value": "https://google.com,",
+							"type": "text"
+						},
+						{
+							"key": "video_description",
+							"value": "this is goole,",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Hp/Desktop/160818038619214824105fdae2a2ef5bd.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/product/Add-Product",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Add-Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Proudct-List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/product/Get-Product",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Get-Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Parent-Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/product/Get-Parent-Category",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Get-Parent-Category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Vendor invitation mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ps_url}}/api/cron/Send-Invitation",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"cron",
+						"Send-Invitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send-Naman-jenny-Mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ps_url}}/api/cron/Send-Annoncement-Info",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"cron",
+						"Send-Annoncement-Info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lead welcome and reminder mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ps_url}}/api/cron/Vendor-Welcome-Reminder",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"cron",
+						"Vendor-Welcome-Reminder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Product-List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ps_url}}/api/product/Vendor-Product-List",
+					"host": [
+						"{{ps_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Vendor-Product-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.razorpay.com/v1/payments/pay_JnNICOZ14hqnv8/capture",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Conqt@2022",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "girish_phalke@techcurve.co",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1,\r\n  \"currency\": \"INR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.razorpay.com/v1/payments/pay_JnNICOZ14hqnv8/capture",
+					"protocol": "https",
+					"host": [
+						"api",
+						"razorpay",
+						"com"
+					],
+					"path": [
+						"v1",
+						"payments",
+						"pay_JnNICOZ14hqnv8",
+						"capture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proposal-Acceptance-By-Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY2MDg4Mjg4OSwiZXhwIjoxNjYzNDc0ODg5fQ.9RYFCsN-sBIT96fOaIAzwVNiCLHuYvizGe4KXiv0La8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"proposal_id\":\"18\",\r\n     \"announcement_id\":\"5\",\r\n     \"action_type\":\"1\"\r\n     \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}/api/announcement/Proposal-Acceptance-By-Customer",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Proposal-Acceptance-By-Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-NewProject-Count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6InRlc3QyQHZlbmRvci5jb20iLCJuYW1lIjoiQ3JlZGl0IHRvIEJhbmsgbmV3In0sImlhdCI6MTY1NzI2OTc1MCwiZXhwIjoxNjU5ODYxNzUwfQ._XCP23EHEYLY7lvIa3R2L32CJ51noLFOn9BjiFSPWfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Get-Vendor-NewProject-Count",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Get-Vendor-NewProject-Count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-Project-Count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjksInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY1NzYwNjc4NiwiZXhwIjoxNjYwMTk4Nzg2fQ.osiSP0wPz1o-LP5PwBIhyyu4u_XkYCJwZNaZIlakDjI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/user/Get-Customer-Project-Count",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"Get-Customer-Project-Count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6ImFiY2x0ZCJ9LCJpYXQiOjE2NTg1MDM3NzgsImV4cCI6MTY2MTA5NTc3OH0.XMYmNFmXvFe5hq106Q3uAZwvGO_Rop7xyEcv3WVvrkE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "Excell 365-new",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "product_description",
+							"value": "this is nice product 2",
+							"type": "text"
+						},
+						{
+							"key": "product_information",
+							"value": "this is product information ",
+							"type": "text"
+						},
+						{
+							"key": "features",
+							"value": "new,",
+							"type": "text"
+						},
+						{
+							"key": "specifications",
+							"value": "hello,",
+							"type": "text"
+						},
+						{
+							"key": "compatibility",
+							"value": "all machine,",
+							"type": "text"
+						},
+						{
+							"key": "video_link",
+							"value": "https://google.com,",
+							"type": "text"
+						},
+						{
+							"key": "video_description",
+							"value": "this is goole,",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/shivy/Downloads/Copy of Black seminar event - Made with PosterMyWall (1).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local_url}}/api/product/10",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Milestone-Payment-Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY2MTUwOTkzNCwiZXhwIjoxNjY0MTAxOTM0fQ.qVT3ZPzq4qJDmOC291guAl1deUTtRT-t7HXDYBOd-FQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transactions_id\": \"pay_Jp9EbKg5Pmao9W\",\r\n\"currency\": \"INR\",\r\n\"amount\": \"1\",\r\n\"transaction_status\": \"COMPLETED\",\r\n\"milestone_id\":\"1\",\r\n\"invoice_no\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Milestone-Payment-Update",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Milestone-Payment-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-Milestone-invoice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY2MTg1MjEyMywiZXhwIjoxNjY0NDQ0MTIzfQ.LK5Un8yAC5dK4Cyu2rJq6PXHSY2AP4p2eiDsXU4ZCUs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"milestone_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/announcement/Get-Customer-Milestone-invoice",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"announcement",
+						"Get-Customer-Milestone-invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start-Milestone-from-Vendor-Side",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIyLCJ1c2VyX25hbWUiOiJ0ZWNoY3VydmVpbmRpYUBnbWFpbC5jb20iLCJuYW1lIjoidGVjaGN1cnZlIiwibG9naW5fdHlwZSI6IlYifSwiaWF0IjoxNjY0NTE2MjI4LCJleHAiOjE2NjcxMDgyMjh9.vWH6x6rLmWcznH_dPXO7q_ckfdoXbSlI_66tYcFDZIk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"milestone_id\":\"63\",\r\n\"type\":\"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Start-Project-Milestone-Wise",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Start-Project-Milestone-Wise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-Transaction-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjQsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2In0sImlhdCI6MTY2MTUxMjU3MSwiZXhwIjoxNjY0MTA0NTcxfQ.6kvt69rmv854INDVhNQ-G3s9hPveRHKIycwkloXPga8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/user/Get-Customer-Transaction-List",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"Get-Customer-Transaction-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Update-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjE3NCwidXNlcl9uYW1lIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJjb21wYW55X25hbWUiLCJsb2dpbl90eXBlIjoiViJ9LCJpYXQiOjE2Njc1NTQ2MTEsImV4cCI6MTY3MDE0NjYxMX0.ux-k4RJ3yz8I0RT94P8DXmN4J9MCnFMdn6KFW4neP7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company_name",
+							"value": "Company name",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "First Name",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Last Name",
+							"type": "text"
+						},
+						{
+							"key": "contact_number",
+							"value": "7007402688",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "position",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "department",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "address",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": " data.country",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": " data.city",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": " data.state",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": " data.zipcode",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/shivy/Downloads/PNG image.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Update-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Update-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-agency-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTkzOTQzOSwiZXhwIjoxNjY4NTMxNDM5fQ.C6dS2u5NBNJhNOoE8CPHKrQ8ej7oWsnT0ITok4FW4Mk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "agency_name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "agency_email",
+							"value": "email",
+							"type": "text"
+						},
+						{
+							"key": "agency_about",
+							"value": "about",
+							"type": "text"
+						},
+						{
+							"key": "agency_type",
+							"value": "type",
+							"type": "text"
+						},
+						{
+							"key": "agency_contact_number",
+							"value": "number",
+							"type": "text"
+						},
+						{
+							"key": "agency_address",
+							"value": "address",
+							"type": "text"
+						},
+						{
+							"key": "agency_website_link",
+							"value": "https://website_link.com",
+							"type": "text"
+						},
+						{
+							"key": "agency_no_of_employee",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "agency_linkedin_url",
+							"value": "https:linkedin.com",
+							"type": "text"
+						},
+						{
+							"key": "agency_twitter_url",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "agency_instagram_url",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "agency_facebook_url",
+							"value": "https://www.facebook.com",
+							"type": "text"
+						},
+						{
+							"key": "agency_country",
+							"value": " data.agency_country",
+							"type": "text"
+						},
+						{
+							"key": "agency_city",
+							"value": " data.agency_city",
+							"type": "text"
+						},
+						{
+							"key": "agency_state",
+							"value": " data.agency_state",
+							"type": "text"
+						},
+						{
+							"key": "agency_zipcode",
+							"value": " data.agency_zipcode",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/shivy/OneDrive/Pictures/Capture.PNG",
+							"disabled": true
+						},
+						{
+							"key": "gallery",
+							"type": "file",
+							"src": [
+								"/C:/Users/shivy/OneDrive/Pictures/DOCS/MeruTiwari_Sign.png",
+								"/C:/Users/shivy/OneDrive/Pictures/DOCS/sign_Meru.png"
+							],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Agency-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Agency-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Services-Preferences-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjE5MSwidXNlcl9uYW1lIjoicXlueXpvbWVyYUBtYWlsaW5hdG9yLmNvbSIsIm5hbWUiOiJOaWNob2xzb24gUGVubmluZ3RvbiBDbyIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2Nzk4Nzc5MiwiZXhwIjoxNjcwNTc5NzkyfQ.DXY4kkmmxKvGjvtX-YcTOicJIDJvuhLsYNqAmUvRUS4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"services_preferences\":\"services1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Services-Preferences-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Services-Preferences-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Portfolio-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6ImFiY2x0ZCIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NDg5NDQ0MywiZXhwIjoxNjY3NDg2NDQzfQ.vMlV9RFgq8G1wZWpGlSNAcbtYyBS_EwIQKVa3IEJgk4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "project_price",
+							"value": "80000",
+							"type": "text"
+						},
+						{
+							"key": "project_currency",
+							"value": "$",
+							"type": "text"
+						},
+						{
+							"key": "project_duration",
+							"value": "4 years",
+							"type": "text"
+						},
+						{
+							"key": "project_website_link",
+							"value": "https://www.projectwebsite.com",
+							"type": "text"
+						},
+						{
+							"key": "social_link",
+							"value": "https://www.sociallink.com",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (1).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (2).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (3).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (4).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (8).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (9).png",
+								"/C:/Users/shivy/OneDrive/Pictures/Screenshots/Screenshot (10).png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Portfolio-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Portfolio-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Customer-Document-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjE5MSwidXNlcl9uYW1lIjoicXlueXpvbWVyYUBtYWlsaW5hdG9yLmNvbSIsIm5hbWUiOiJOaWNob2xzb24gUGVubmluZ3RvbiBDbyIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2Nzk4Nzc5MiwiZXhwIjoxNjcwNTc5NzkyfQ.DXY4kkmmxKvGjvtX-YcTOicJIDJvuhLsYNqAmUvRUS4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "SnuslKyjQ/1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Customer-Document-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Customer-Document-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendor-Bank-Details-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NzQ2NzYzMSwiZXhwIjoxNjcwMDU5NjMxfQ.6GXQDF4posHUmCWgno_QFaAFzxPCCdJCrwhZORtpxwA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"bank_name\":\"BankName\",\r\n\"bank_account_number\":\"12345678910\",\r\n\"bank_address\":\"Bank Address,Mahoba,India 210427\",\r\n\"account_holder_name\":\"Meru Nath Tiwari\",\r\n\"account_type\":\"Current\",\r\n\"ifsc_code\":\"UBIN0563633\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Vendor-Bank-Details-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Vendor-Bank-Details-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product enquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_name\":\"ABCD\",\r\n    \"phone_number\":\"6789045678\",\r\n    \"email_id\":\"abcd@gmail.com\",\r\n    \"product_id\":\"6\",\r\n    \"category_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/product/Add-Product-Enquiry",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"Add-Product-Enquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product enquiry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJhbWl0IGt1bWFyIHlhZGF2IiwibG9naW5fdHlwZSI6IlUifSwiaWF0IjoxNjY1MzkxMTI1LCJleHAiOjE2Njc5ODMxMjV9.d1yySgh4ilaR9DVNjeWP0YfXwE8Knx6v1-7sQlLBzhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/superdashboard/Get-All-Product-Enquiry",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Get-All-Product-Enquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-My-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-My-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-My-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Agency-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-Agency-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-Agency-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Service-Preferences-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-Service-Preferences-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-Service-Preferences-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Portfolio-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-Portfolio-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-Portfolio-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Company-Document-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-Company-Document-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-Company-Document-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Bank-Details-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjIxNywidXNlcl9uYW1lIjoianl2ZUBtYWlsaW5hdG9yLmNvbSIsIm5hbWUiOiJNYXJ0aW4gSGFycmlzb24gTExDIiwibG9naW5fdHlwZSI6IlYifSwiaWF0IjoxNjY4NzU1OTc4LCJleHAiOjE2NzEzNDc5Nzh9.vueBFOSRk6ZFYCyIzv_0qN8JsI7HKoTVMo-KpqfBjqk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Vendor-Bank-Details-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Vendor-Bank-Details-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Customer-Reviews-in-Vendor-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendor/Get-Customer-Reviews-in-Vendor-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"Get-Customer-Reviews-in-Vendor-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Subscription-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}/api/vendordashboard/Get-Vendor-Subscription-list",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Get-Vendor-Subscription-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Vendor-Subscription-txn-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Get-Vendor-Subscription-txn-list",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Get-Vendor-Subscription-txn-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscription-Vendor-Transaction-Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transactions_id\": \"pay_Jp9EbKg5Pmao9W\",\r\n\"currency\": \"INR\",\r\n\"amount\": \"1\",\r\n\"transaction_status\": \"COMPLETED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Subscription-Vendor-Transaction-Update",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Subscription-Vendor-Transaction-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscription-Vendor-Transaction-Update Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjM4LCJ1c2VyX25hbWUiOiJhYmMxMjNAZ21haWwuY29tIiwibmFtZSI6IkNvbXBhbnkgbmFtZSIsImxvZ2luX3R5cGUiOiJWIn0sImlhdCI6MTY2NTk0MTE3NCwiZXhwIjoxNjY4NTMzMTc0fQ.r5yk7LYAMVS9jcQx4kxsGQTjzaCi_jr_nKKyXAjxtpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transactions_id\": \"pay_Jp9EbKg5Pmao9W\",\r\n\"currency\": \"INR\",\r\n\"amount\": \"1\",\r\n\"transaction_status\": \"COMPLETED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/vendordashboard/Subscription-Vendor-Transaction-Update",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"vendordashboard",
+						"Subscription-Vendor-Transaction-Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Super-Create-List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY4MjUzNzM5LCJleHAiOjE2NzA4NDU3Mzl9.MJaJhACJgTEmPl5LXYCK4x2KF469EGcvvTxjbUxpeQ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "email",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "company_name",
+							"value": "company name",
+							"type": "text"
+						},
+						{
+							"key": "phone_no",
+							"value": "7007402688",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "category",
+							"type": "text"
+						},
+						{
+							"key": "list_name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "xls/csv_file",
+							"type": "file",
+							"src": "/C:/Users/shivy/Downloads/data - Sheet1 (1).csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local_url}}/api/superdashboard/Super-Create-List",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Super-Create-List"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-EmailList-Created-By-Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY4MjUzNzM5LCJleHAiOjE2NzA4NDU3Mzl9.MJaJhACJgTEmPl5LXYCK4x2KF469EGcvvTxjbUxpeQ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"list_name\":\"thailand ERP\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/superdashboard/Get-List-Created-By-Admin",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Get-List-Created-By-Admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin-Send-Email-To-Vendors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY4MjUzNzM5LCJleHAiOjE2NzA4NDU3Mzl9.MJaJhACJgTEmPl5LXYCK4x2KF469EGcvvTxjbUxpeQ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "campaign_name",
+							"value": "Testing",
+							"type": "text"
+						},
+						{
+							"key": "email_subscriber_list",
+							"value": "jivivo3115@invodua.com",
+							"type": "text"
+						},
+						{
+							"key": "subscriber_listname",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email_textbox",
+							"value": "<h1>Testing Mail</h1>",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": "/C:/Users/shivy/OneDrive/Pictures/Capture.PNG",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ds_url}}/api/superdashboard/Admin-Send-Email-To-Vendors",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Admin-Send-Email-To-Vendors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Campaign-Report-To-Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFtaXQxMm5pZzk2QGdtYWlsLmNvbSIsIm5hbWUiOiJBbWl0IFlhZGF2IiwibG9naW5fdHlwZSI6IlMifSwiaWF0IjoxNjY4MjUzNzM5LCJleHAiOjE2NzA4NDU3Mzl9.MJaJhACJgTEmPl5LXYCK4x2KF469EGcvvTxjbUxpeQ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/superdashboard/Get-Campaign-Report-To-Admin",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"superdashboard",
+						"Get-Campaign-Report-To-Admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User-My-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkiLCJsb2dpbl90eXBlIjoiVSJ9LCJpYXQiOjE2Njk0MzcyNTIsImV4cCI6MTY3MjAyOTI1Mn0.Q8F8LaEvSXrEQP2BQsPApaQbHdJt88J901VQcGnQmGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ds_url}}/api/user/Get-User-My-Profile",
+					"host": [
+						"{{ds_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"Get-User-My-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User-Agency-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkiLCJsb2dpbl90eXBlIjoiVSJ9LCJpYXQiOjE2Njk0MzcyNTIsImV4cCI6MTY3MjAyOTI1Mn0.Q8F8LaEvSXrEQP2BQsPApaQbHdJt88J901VQcGnQmGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}/api/user/Get-User-Agency-Profile",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"Get-User-Agency-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Update-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkiLCJsb2dpbl90eXBlIjoiVSJ9LCJpYXQiOjE2Njk0MzcyNTIsImV4cCI6MTY3MjAyOTI1Mn0.Q8F8LaEvSXrEQP2BQsPApaQbHdJt88J901VQcGnQmGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Amit",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Yadav",
+							"type": "text"
+						},
+						{
+							"key": "company_name",
+							"value": "xyz company",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "9596561100",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "Software",
+							"type": "text"
+						},
+						{
+							"key": "department_name",
+							"value": "Software",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Nagpur",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "400042",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "MH",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Nagpur",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local_url}}/api/user/User-Update-Profile",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Update-Profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Agency-Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjI4NSwidXNlcl9uYW1lIjoiaW5mb0B2aW55dGhhaS5jby50aCIsIm5hbWUiOiJ2aW55IHRoYWkiLCJsb2dpbl90eXBlIjoiVSJ9LCJpYXQiOjE2Njk0MzcyNTIsImV4cCI6MTY3MjAyOTI1Mn0.Q8F8LaEvSXrEQP2BQsPApaQbHdJt88J901VQcGnQmGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "agency_name",
+							"value": "Abcd",
+							"type": "text"
+						},
+						{
+							"key": "agency_email",
+							"value": "abcd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "agency_about",
+							"value": "rftgyhuj mkiloijk mjhdnuush",
+							"type": "text"
+						},
+						{
+							"key": "agency_type",
+							"value": "XYZ",
+							"type": "text"
+						},
+						{
+							"key": "agency_phone_no",
+							"value": "6789098909",
+							"type": "text"
+						},
+						{
+							"key": "agency_address",
+							"value": "nagpur",
+							"type": "text"
+						},
+						{
+							"key": "agency_country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "agency_state",
+							"value": "MH",
+							"type": "text"
+						},
+						{
+							"key": "agency_city",
+							"value": "Nagpr",
+							"type": "text"
+						},
+						{
+							"key": "agency_zipcode",
+							"value": "440055",
+							"type": "text"
+						},
+						{
+							"key": "agency_website",
+							"value": "www.abcd.in",
+							"type": "text"
+						},
+						{
+							"key": "no_of_employee",
+							"value": "52",
+							"type": "text"
+						},
+						{
+							"key": "linkedin_url",
+							"value": "yhuji",
+							"type": "text"
+						},
+						{
+							"key": "instagram_url",
+							"value": "ikolp",
+							"type": "text"
+						},
+						{
+							"key": "facebook_url",
+							"value": "plokppp",
+							"type": "text"
+						},
+						{
+							"key": "twitter_url",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local_url}}/api/user/User-Agency-Profile",
+					"host": [
+						"{{local_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"User-Agency-Profile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "ps_url",
+			"value": "https://apiconnect.hunt-app.co",
+			"type": "string"
+		},
+		{
+			"key": "ds_url",
+			"value": "https://dev-api.conqt.com",
+			"type": "string"
+		}
+	]
+}

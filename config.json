@@ -1,0 +1,12 @@
+{
+ "JWT_SECRET":"CV5TWIGW6V21K4EOQUAVFNG6EPKT07VSL8E5ZASP",
+ "DB_HOST":"hunt-app-db-pro.cm30rlobuoic.ap-southeast-1.rds.amazonaws.com",
+ "USER_NAME":"admin",
+ "PASSWORD":"RPjzxZrP1y18zMU6sbP8FbPO6N1LLg",
+ "DB":"hunt_app",
+ "DEV_DB":"dev_hunt_app",
+ "SERVER":"P",
+ "CHARSET":"utf8mb4",
+ "NODE_ENV":"production1",
+ "PORT":"80"
+ }
